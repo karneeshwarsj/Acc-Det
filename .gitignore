@@ -1,0 +1,105 @@
+# =============================================================================
+# Root .gitignore — accident-detection-app (monorepo)
+# Covers: Node/frontend, Python/backend, ML training, OS & editor files
+# Note: More specific rules live in backend/.gitignore & frontend/.gitignore
+# =============================================================================
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+build/
+out/
+.vite/
+vite.config.*.timestamp-*
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs/
+*.log
+
+# ── Python / Backend ─────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+venv/
+.venv/
+env/
+.env/
+ENV/
+*.egg-info/
+*.egg
+wheels/
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.ipynb_checkpoints/
+
+# ── Environment & Secrets ────────────────────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.local
+secrets/
+
+# ── ML / Training Artifacts ──────────────────────────────────────────────────
+# Model weights & checkpoints
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+*.pkl
+*.pickle
+*.safetensors
+weights/
+checkpoints/
+runs/
+
+# Datasets (usually large; track with DVC or similar)
+datasets/
+data/raw/
+data/processed/
+
+# Training outputs
+training/outputs/
+training/results/
+training/runs/
+
+# ── Temp & Generated Files ───────────────────────────────────────────────────
+temp/
+tmp/
+*.tmp
+uploads/
+output/
+
+# ── TypeScript ───────────────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ── Editor & IDE ─────────────────────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# ── OS Files ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
