@@ -25,7 +25,8 @@ npm install
 # Every time:
 npm run dev
 ```
-
+### Note:
+Install the Miniconda3 binary Package given in the repo and add it to your root directory 👍
 ---
 
 ## 📁 Structure
