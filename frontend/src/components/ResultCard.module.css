@@ -1,0 +1,124 @@
+.card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header row */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.headerIcon { font-size: 2.2rem; flex-shrink: 0; line-height: 1; margin-top: 4px; }
+
+.resultLabel {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.probInfo { flex: 1; }
+.riskLevelLabel { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.riskLevelValue { font-size: 1.8rem; font-weight: 800; line-height: 1; margin-bottom: 10px; }
+
+.risk_low      { color: var(--green); }
+.risk_medium   { color: var(--amber); }
+.risk_high     { color: var(--amber); }
+.risk_critical { color: var(--red);   }
+
+.metaRow { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Circular ring */
+.ringWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.ring { width: 100px; height: 100px; transform: rotate(-90deg); }
+.ringTrack {
+  fill: none;
+  stroke: rgba(255,255,255,0.06);
+  stroke-width: 8;
+}
+.ringFill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.ringText {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  fill: var(--text-primary);
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+.ringLabel { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Score bars */
+.scoreBar { display: flex; flex-direction: column; gap: 10px; }
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.scoreLabel {
+  width: 200px;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+}
+.scoreTrack {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.scoreFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.barRed   { background: linear-gradient(90deg, var(--red-dark), var(--red)); }
+.barAmber { background: linear-gradient(90deg, #d97706, var(--amber)); }
+.barGreen { background: linear-gradient(90deg, #16a34a, var(--green)); }
+.scorePct { font-size: 0.75rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; width: 36px; text-align: right; }
+
+/* Heatmap */
+.heatmapWrap { }
+.sectionTitle { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+.heatmap { width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border); }
+
+/* Footer */
+.footer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Error card */
+.errorCard {
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-color: rgba(239,68,68,0.25) !important;
+  background: rgba(239,68,68,0.06) !important;
+}
+.errorIcon   { font-size: 2rem; flex-shrink: 0; }
+.errorTitle  { font-size: 1rem; font-weight: 700; color: #fca5a5; margin-bottom: 4px; }
+.errorMsg    { font-size: 0.875rem; color: var(--text-secondary); }

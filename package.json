@@ -6,9 +6,9 @@
     "install:backend": "cd backend && python -m venv venv && venv\\Scripts\\pip install -r requirements.txt",
     "install:frontend": "cd frontend && npm install",
     "install": "npm run install:backend && npm run install:frontend",
-    "dev:backend": "cd backend && venv\\Scripts\\uvicorn main:app --reload --port 8000 --host 0.0.0.0",
+    "dev:backend": "cd backend && venv\\Scripts\\python -m uvicorn main:app --reload --port 8000 --host 0.0.0.0",
     "dev:frontend": "cd frontend && npm run dev",
-    "dev": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"red,cyan\" --kill-others \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"red,cyan\" --kill-others-on-fail \"npm run dev:backend\" \"npm run dev:frontend\"",
     "start": "npm run dev"
   },
   "devDependencies": {
